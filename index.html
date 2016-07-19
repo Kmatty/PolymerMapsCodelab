@@ -1,0 +1,31 @@
+<body>
+  <template is="dom-bind">
+    
+    <google-map map="{{map}}" latitude="37.779"
+        longitude="-122.3892" api-key="AIzaSyBPwU2RHJPmOXtrYdwgBtvGrNwXBk7o864"
+        disable-default-ui zoom="13">
+      <google-map-marker latitude="37.779" longitude="-122.3892"
+          title="Go Giants!" draggable="true"></google-map-marker>
+    </google-map>
+
+    <google-map-directions map="{{map}}"
+        start-address="{{start}}"
+        end-address="{{end}}"
+        api-key="AIzaSyBPwU2RHJPmOXtrYdwgBtvGrNwXBk7o864"></google-map-directions>
+
+    <paper-card elevation="2">
+      <paper-icon-item>
+        <iron-icon icon="search" item-icon></iron-icon>
+        <paper-input label="Start address" 
+                     value="{{start}}"></paper-input>
+      </paper-icon-item>
+      <paper-icon-item>
+        <iron-icon icon="search" item-icon></iron-icon>
+        <paper-input label="End address"
+                     value="{{end}}"></paper-input>
+      </paper-icon-item>
+    </paper-card>
+
+  </template>
+
+</body>
